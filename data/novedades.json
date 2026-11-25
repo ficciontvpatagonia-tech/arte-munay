@@ -1,0 +1,45 @@
+{
+ "agenda": [
+  {
+   "tipo": "Taller",
+   "titulo": "Taller de alfarería y cerámica",
+   "fecha": "Fecha a confirmar",
+   "lugar": "Taller Arte Munay, Tucumán",
+   "texto": "Taller de cerámica artesanal: técnicas de pellizco, rollo y plancha, decoración y tratamiento de superficies. Fechas y cupos a confirmar.",
+   "imagen": "img/TALLER/taller-02.jpg",
+   "provisorio": true
+  },
+  {
+   "tipo": "Muestra",
+   "titulo": "Próxima muestra",
+   "fecha": "Fecha a confirmar",
+   "lugar": "Lugar a confirmar",
+   "texto": "Texto de la muestra a completar por la artista.",
+   "imagen": "img/MUESTRAS/muestra-03.jpg",
+   "provisorio": true
+  }
+ ],
+ "muestras_pasadas": [
+  {
+   "titulo": "APUS Serie II · Salón Comuna Rural de Amaicha del Valle",
+   "anio": "2025",
+   "imagen": "img/PINTURAS/pintura-19.jpg",
+   "nota": "obra de la muestra"
+  },
+  {
+   "titulo": "Mural “Guardianes de las montañas sagradas” · 30 × 3 m · Plazoleta Islas Malvinas, San Miguel de Tucumán",
+   "anio": "2025",
+   "imagen": "img/REDES/fb-046.jpg"
+  },
+  {
+   "titulo": "APUS. Espíritus protectores de las montañas sagradas · Casa Museo de la Ciudad, San Miguel de Tucumán",
+   "anio": "2024",
+   "imagen": "img/MUESTRAS/muestra-01.jpg"
+  },
+  {
+   "titulo": "Mujeres al natural (serie Conexiones) · La Cittadina Espacio de Arte, Concepción",
+   "anio": "",
+   "imagen": ""
+  }
+ ]
+}

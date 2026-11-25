@@ -1,0 +1,188 @@
+/* Arte Munay — estética andina sutil: tierra, adobe, tejido. El color lo pone la obra. */
+:root{
+  --hueso:#E8DDCD;
+  --adobe:#DCCDB9;
+  --tierra:#3A2A20;
+  --tierra-suave:#64503F;
+  --terracota:#A4532F;
+  --ocre:#B9862F;
+  --linea:#C9B79F;
+  --serif:"Cormorant Garamond", Georgia, serif;
+  --sans:"Work Sans", system-ui, sans-serif;
+  --ancho:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{
+  margin:0;background:var(--hueso);color:var(--tierra);
+  font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.65;
+  /* textura de adobe casi imperceptible */
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .32 0 0 0 0 .22 0 0 0 0 .15 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='700'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.006' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .32 0 0 0 0 .22 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='700' height='700' filter='url(%23m)'/%3E%3C/svg%3E");
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;margin:0}
+h2{font-size:clamp(2rem,4vw,2.8rem)}
+
+/* Marcadores de texto provisorio (se quitan al cargar datos reales) */
+.provisorio{border-bottom:1px dashed var(--terracota)}
+.provisorio-bloque{border-left:2px dashed var(--terracota);padding-left:1rem;color:var(--tierra-suave);font-style:italic}
+
+/* ---------- Cabecera ---------- */
+.top{
+  position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;
+  padding:1rem clamp(1.2rem,4vw,3rem);background:rgba(232,221,205,.93);backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--linea);
+}
+.marca{font-family:var(--serif);font-size:1.6rem;text-decoration:none;letter-spacing:.02em}
+.marca span{color:var(--terracota);font-style:italic}
+.nav{display:flex;gap:2rem}
+.nav a{text-decoration:none;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase}
+.nav a:hover{color:var(--terracota)}
+.menu-btn{display:none;background:none;border:0;font-size:1.5rem;color:var(--tierra);cursor:pointer}
+
+/* ---------- Guarda andina (escalonado fino, tipo aguayo) ---------- */
+.guarda{
+  height:14px;max-width:var(--ancho);margin:0 auto;opacity:.55;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14' viewBox='0 0 28 14'%3E%3Cpath d='M0 13h4V9h4V5h4V1h4v4h4v4h4v4h4' fill='none' stroke='%23A4532F' stroke-width='1'/%3E%3Ccircle cx='14' cy='10' r='1.2' fill='%23B9862F'/%3E%3C/svg%3E") repeat-x center;
+}
+
+/* ---------- Hero ---------- */
+.hero{
+  max-width:var(--ancho);margin:0 auto;min-height:min(calc(100vh - 70px),860px);
+  display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(2rem,5vw,5rem);align-items:center;
+  padding:3rem clamp(1.2rem,4vw,3rem);
+}
+.sobre-titulo{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--terracota);margin:0 0 1.2rem}
+.hero h1{font-size:clamp(2.8rem,6vw,4.8rem);font-weight:400}
+.bajada{font-family:var(--serif);font-size:1.45rem;font-style:italic;color:var(--tierra-suave);margin:1.4rem 0 2.2rem}
+.hero-acciones{display:flex;gap:1.8rem;align-items:center;flex-wrap:wrap}
+.hero > *{min-width:0}
+.hero-obra{margin:0;display:flex;justify-content:center}
+.hero-obra img{max-height:min(78vh,720px);width:auto;box-shadow:0 24px 50px -28px rgba(58,42,32,.55)}
+
+.btn{
+  display:inline-block;padding:.85rem 1.7rem;background:var(--tierra);color:var(--hueso);
+  text-decoration:none;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;transition:background .25s;
+  border:0;cursor:pointer;font-family:var(--sans)
+}
+.btn:hover{background:var(--terracota)}
+.link{font-size:.9rem;text-decoration:none;border-bottom:1px solid var(--linea);padding-bottom:2px}
+.link:hover{border-color:var(--terracota);color:var(--terracota)}
+
+/* ---------- Secciones ---------- */
+.seccion{max-width:var(--ancho);margin:0 auto;padding:5rem clamp(1.2rem,4vw,3rem)}
+.seccion-cab{display:flex;align-items:baseline;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.nota{color:var(--tierra-suave);margin:0}
+.sub{font-size:1.6rem;margin:4rem 0 1.5rem}
+
+/* Filtros */
+.filtros{display:flex;gap:.4rem;flex-wrap:wrap}
+.filtros button{
+  background:none;border:1px solid transparent;padding:.4rem .9rem;cursor:pointer;
+  font-family:var(--sans);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tierra-suave)
+}
+.filtros button[aria-selected="true"]{border-color:var(--tierra);color:var(--tierra)}
+.filtros button:hover{color:var(--terracota)}
+
+/* Texto de la serie elegida */
+.serie-texto{max-width:46rem;margin:-1.2rem 0 2rem;font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--tierra-suave);min-height:1em}
+.filtros{max-width:62%;justify-content:flex-end}
+@media (max-width:820px){.filtros{max-width:100%;justify-content:flex-start}}
+
+/* Grilla tipo mampostería: nunca recorta la obra */
+.grilla{columns:4 240px;column-gap:1.4rem}
+.pieza{break-inside:avoid;margin:0 0 1.6rem;cursor:zoom-in}
+.pieza img{background:var(--adobe)}
+.pieza img{width:100%;height:auto;transition:opacity .4s, transform .6s}
+.pieza:hover img{opacity:.92}
+.pieza figcaption{
+  padding:.55rem 0 0;font-size:.78rem;letter-spacing:.08em;color:var(--tierra-suave);
+  display:flex;justify-content:space-between
+}
+
+/* Agenda */
+.agenda{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem}
+.evento{display:grid;grid-template-columns:150px 1fr;gap:1.4rem;padding:1.4rem;border:1px solid var(--linea);background:rgba(255,255,255,.25)}
+.evento img{width:150px;height:150px;object-fit:cover}
+.evento .tipo{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--terracota);margin:0}
+.evento h3{font-size:1.55rem;margin:.3rem 0 .4rem}
+.evento .cuando{font-size:.88rem;margin:0 0 .6rem;color:var(--tierra-suave)}
+.evento p{margin:0 0 .8rem;font-size:.95rem}
+.pasadas{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.6rem}
+.pasadas figure{margin:0}
+.pasadas img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.pasadas figcaption{font-size:.85rem;padding-top:.5rem;color:var(--tierra-suave)}
+
+/* Sobre mí */
+.sobre{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+.sobre figure{margin:0}
+.sobre h2{margin-bottom:1.5rem}
+.cita{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--terracota);margin:1.8rem 0}
+.franja-taller img{width:100%;max-height:70vh;object-fit:cover;filter:saturate(.9)}
+
+h1 .munay{color:var(--terracota)}
+.firma{font-family:var(--sans);font-size:.85rem;letter-spacing:.28em;text-transform:uppercase;margin:1rem 0 0;color:var(--tierra)}
+.sobre p{margin:0 0 1rem}
+.bio-detalle{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.5rem,4vw,3.5rem);padding-top:0;font-size:.95rem}
+.bio-col h3{font-size:1.5rem;margin-bottom:.8rem;padding-bottom:.6rem;border-bottom:1px solid var(--linea)}
+.bio-col ul{margin:0;padding-left:1.1rem}
+.bio-col li{margin-bottom:.5rem}
+.bio-col li::marker{color:var(--terracota)}
+@media (max-width:820px){.bio-detalle{grid-template-columns:1fr}}
+
+/* Contacto */
+.contacto{text-align:center}
+.contacto h2{margin-bottom:.8rem}
+.contacto-links{display:flex;justify-content:center;align-items:center;gap:2rem;flex-wrap:wrap;margin-top:2rem}
+
+.pie{text-align:center;padding:2rem 1rem 3rem;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--tierra-suave)}
+.pie p{margin-top:1.5rem}
+
+/* ---------- Visor ---------- */
+dialog#visor{
+  width:100vw;height:100vh;max-width:none;max-height:none;margin:0;border:0;padding:2rem;
+  background:var(--hueso);color:var(--tierra);
+  display:none;grid-template-columns:auto 1fr 300px auto;gap:2rem;align-items:center
+}
+dialog#visor[open]{display:grid}
+dialog::backdrop{background:var(--hueso)}
+#visor figure{margin:0;height:calc(100vh - 4rem);display:flex;align-items:center;justify-content:center}
+#visor img{max-height:100%;max-width:100%;width:auto;height:auto;object-fit:contain}
+.ficha-cat{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--terracota);margin:0 0 .5rem}
+.ficha h3{font-size:1.9rem;margin-bottom:.6rem}
+.ficha p{color:var(--tierra-suave);font-size:.95rem}
+.aviso-prov{display:inline-block;margin-top:.8rem;font-size:.72rem;letter-spacing:.06em;color:var(--terracota);border-top:1px dashed var(--terracota);padding-top:.4rem}
+.cerrar,.flecha{background:none;border:0;color:var(--tierra);cursor:pointer;font-family:var(--serif)}
+.cerrar{position:absolute;top:1rem;right:1.5rem;font-size:2.4rem;line-height:1}
+.flecha{font-size:3rem;padding:1rem}
+.cerrar:hover,.flecha:hover{color:var(--terracota)}
+
+/* ---------- Celular ---------- */
+@media (max-width:820px){
+  .menu-btn{display:block}
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--hueso);border-bottom:1px solid var(--linea)}
+  .nav.abierto{display:flex}
+  .nav a{padding:1rem 1.5rem;border-top:1px solid var(--linea)}
+  .hero{grid-template-columns:1fr;min-height:auto;padding-top:2rem}
+  .hero-obra{order:-1}
+  .hero-obra img{max-height:60vh;max-width:100%;height:auto}
+  .top{padding:.8rem 1.2rem}
+  .sobre{grid-template-columns:1fr}
+  .evento{grid-template-columns:1fr}
+  .evento img{width:100%;height:200px}
+  .grilla{columns:2 150px;column-gap:1rem}
+  .pieza{margin-bottom:1rem}
+  dialog#visor{grid-template-columns:1fr;grid-template-rows:1fr auto;padding:3.5rem 1rem 1rem;gap:1rem;overflow:auto}
+  #visor figure{height:62vh}
+  .flecha{position:absolute;top:31vh;font-size:2.4rem;background:rgba(232,221,205,.75)}
+  .flecha.prev{left:0}.flecha.next{right:0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.cerrar:focus,.flecha:focus{outline:none}.cerrar:focus-visible,.flecha:focus-visible{outline:1px dashed var(--terracota);outline-offset:4px}
+
+.statement{margin:1.5rem 0 0;padding-left:1.2rem;border-left:2px solid var(--terracota);font-family:var(--serif);font-size:1.25rem;font-style:italic;line-height:1.5}
+.statement cite{display:block;margin-top:.5rem;font-family:var(--sans);font-style:normal;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tierra-suave)}
+.sin-foto{aspect-ratio:4/3;background:var(--adobe) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14' viewBox='0 0 28 14'%3E%3Cpath d='M0 13h4V9h4V5h4V1h4v4h4v4h4v4h4' fill='none' stroke='%23A4532F' stroke-width='1' opacity='.5'/%3E%3C/svg%3E") repeat-x center}
