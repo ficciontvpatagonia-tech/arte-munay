@@ -46,7 +46,7 @@ function abrir(i) {
   const o = visibles[actual];
   $("#visor-img").src = o.imagen;
   $("#visor-img").alt = `${titulo(o)} — ${o.categoria}`;
-  $("#ficha-cat").textContent = o.serie + " · " + o.categoria;
+  $("#ficha-cat").textContent = o.serie + " · " + o.categoria + (o.num ? " · " + o.num : "");
   $("#ficha-titulo").textContent = titulo(o);
   $("#ficha-datos").innerHTML = ([o.tecnica, o.medidas, o.anio].filter(Boolean).join("<br>") || "Datos de la obra a completar")
     + (o.provisorio ? '<br><span class="aviso-prov">Datos provisorios, a confirmar por la artista</span>' : "");
